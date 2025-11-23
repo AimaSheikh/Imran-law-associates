@@ -1,0 +1,570 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+  color: #F0F4F8;
+}
+
+section {
+  padding: 40px 40px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+.logo-link{
+  text-decoration: none;
+}
+
+.name {
+  font-size: 33px;
+  color: white;
+  margin: 0;
+  font-family: serif;
+}
+
+.tagline {
+  font-size: 12px;
+  color: saddlebrown;
+  margin: 0;
+  text-align: left;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* desktop: keep right-aligned */
+  width: auto;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding-right: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+  font-size: 18px;
+}
+
+.nav-menu a:hover {
+  color: saddlebrown; /* accent color */
+}
+
+
+/* ---------- Hamburger Button ---------- */
+/* Move hamburger icon to right */
+.nav-toggle {
+  margin-left: auto;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ---------- Responsive ---------- */
+
+/* Tablets / Laptops: center nav links */
+@media (max-width: 1200px) {
+  .nav-bar {
+    justify-content: center; /* center nav menu */
+    width: 100%;
+  }
+
+  .nav-menu {
+    justify-content: center; /* center links inside nav */
+    padding-right: 0;
+  }
+}
+
+/* Mobile / Small Tablets */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-bar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    flex-direction: column;
+    align-items: center; /* center links vertically */
+  }
+
+  .nav-bar.active {
+    max-height: 300px; /* show menu */
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;   /* center links horizontally */
+    justify-content: center;
+    text-align: center;    /* text centered */
+    width: 100%;
+    padding: 1rem 0;
+    gap: 1rem;
+    padding-left: 0;
+  }
+}
+
+/* Banner Container */
+.banner-div {
+  position: relative; /* needed for absolute positioning of text */
+  width: 100%;
+  max-height: 610px;/* adjust for desktop */
+  overflow: hidden;
+}
+
+/* Banner Image */
+.banner-div img {
+  width: 100%;
+  height: 610px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Banner Container */
+.banner-div {
+  position: relative;
+  width: 100%;
+  height: 90vh; /* responsive height */
+  overflow: hidden;
+}
+
+/* Banner Image Always Responsive */
+.banner-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* makes image fully fill area */
+  object-position: center; /* keeps the important part centered */
+}
+
+/* Black Overlay */
+.banner-div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Text Overlay */
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+  z-index: 2;
+}
+
+.banner-text h1 {
+  font-size: 40px;
+  color: whitesmoke;
+  margin: 0;
+}
+
+.banner-text p {
+  font-size: 20px;
+  color: white;
+  margin-top: 5px;
+}
+
+/* Responsive Adjustments */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .banner-div {
+    height: 55vh;
+  }
+  .banner-text h1 { font-size: 2.5rem; }
+  .banner-text p { font-size: 1.1rem; }
+}
+
+/* Small Tablets / Large Mobiles */
+@media (max-width: 768px) {
+  .banner-div {
+    height: 50vh;
+  }
+  .banner-text h1 { font-size: 2rem; }
+  .banner-text p { font-size: 1rem; }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .banner-div {
+    height: 45vh;
+  }
+  .banner-text h1 { font-size: 1.5rem; }
+  .banner-text p { font-size: 0.9rem; }
+}
+
+.container{
+  width: 100%;                 /* full width on small screens */
+  max-width: 1200px;           /* limits width on large screens */
+  margin-bottom: 20px;            /* centers container horizontally */
+  padding: 0 20px;             /* horizontal padding for spacing */
+  box-sizing: border-box;  
+}
+
+.heading {
+  color: #6E260E;
+  font-size: 35px;
+  font-family: serif;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.description {
+  color: #333;
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: left; /* text inside stays left-aligned */
+  max-width: 1300px; /* wider for landscape feel */
+  margin: 20px auto; /* centers block horizontally */
+  padding: 0 20px;
+}
+
+.IML {
+  color: #6E260E;
+}
+
+/* Responsive: Tablets */
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 95%; /* slightly narrower for tablets */
+    padding: 0 15px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .banner-div {
+    height: 55vh;
+  }
+  .banner-text h1 { font-size: 2.5rem; }
+  .banner-text p { font-size: 1.1rem; }
+}
+
+/* Small Tablets / Large Mobiles */
+@media (max-width: 768px) {
+  .banner-div {
+    height: 50vh;
+  }
+  .banner-text h1 { font-size: 2rem; }
+  .banner-text p { font-size: 1rem; }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .banner-div {
+    height: 45vh;
+  }
+  .banner-text h1 { font-size: 1.5rem; }
+  .banner-text p { font-size: 0.9rem; }
+}
+
+/* Main container using CSS Grid */
+.main-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 per row on desktop */
+  gap: 30px;
+  padding: 0 20px;
+}
+
+/* Each associate card */
+.image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Associate image */
+.image img {
+  width: 100%;
+  max-width: 300px; /* limit size */
+  height: 500px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+  border: #6E260E solid 2px;
+}
+
+/* Name */
+.image p:first-of-type {
+  font-size: 20px;
+  font-weight: 500;
+  color: #6E260E;
+  margin: 5px 0 0;
+  font-family: serif;
+}
+
+/* Title */
+.image p:last-of-type {
+  font-size: 15px;
+  color: #333;
+  margin: 2px 0 0;
+}
+
+/* Hover effect */
+.image:hover img {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+/* ========================= */
+/* RESPONSIVE GRID LAYOUT    */
+/* ========================= */
+
+/* Tablets: 2 per row */
+@media (max-width: 1024px) {
+  .main-container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center; /* center the grid items */
+  }
+
+  .image img {
+    max-width: 240px;
+    height: 400px;
+  }
+}
+
+/* Mobile: 1 per row */
+@media (max-width: 600px) {
+  .main-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .image img {
+    max-width: 220px;
+    height: 350px;
+  }
+
+  .image p:first-of-type {
+    font-size: 18px;
+  }
+
+  .image p:last-of-type {
+    font-size: 14px;
+  }
+}
+
+/* SECTION */
+.ila-info {
+  width: 100%;
+  padding: 40px 40px;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.55)
+  ),
+  rgba(110, 38, 14, 0.9);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  position: relative;
+}
+
+/* LEFT / RIGHT */
+.ila-left, .ila-right {
+  flex: 1;
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+
+/* TITLE — FIXED + FORCED */
+.ila-info .ila-title {
+  font-size: 35px;
+  font-weight: 500;
+  color: white !important;        /* FORCE apply */
+  font-family: 'Times New Roman', Times, serif;
+  position: relative;
+}
+
+/* Contact title only */
+.ila-right .ila-contact {
+  font-size: 35px;             /* same as left title */
+  font-weight: 500;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  position: relative;
+  text-align: right;
+  padding-right: 180px;
+}
+
+.ila-follow{
+  font-size: 25px;             /* same as left title */
+  font-weight: 500;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  position: relative;
+  padding-top: 40px;
+}
+
+/* Keep the rest of contact details normal */
+.ila-right p:not(.ila-contact) {
+  font-size: 18px;
+  color: black;
+  margin: 6px 0;
+  line-height: 1.4;
+  text-align: left;
+  padding-left: 300px;
+}
+
+.ila-subtitle{
+  font-size: 15px;
+  color: black;
+}
+
+.ila-email {
+  color: black;       /* gold-ish color for visibility */
+  text-decoration: none; /* remove underline */
+  font-weight: 500;
+}
+
+.ila-email:hover {
+  text-decoration: underline; /* optional hover effect */
+  color: #6E260E;
+}
+
+.ila-follow{
+  font-size: 27px;
+  font-weight: 500;
+  color: white !important;        /* FORCE apply */
+  font-family: 'Times New Roman', Times, serif;
+  text-align: left;
+}
+
+/* Facebook icon link */
+a[href*="facebook.com"] {
+  font-size: 24px;               /* size of the icon */
+  color: #1877f2;                /* Facebook blue */
+  display: inline-block;
+  transition: transform 0.2s, color 0.2s;
+  text-decoration: none;         /* remove underline */
+}
+
+a[href*="facebook.com"]:hover {
+  color: #0f5bb5;                /* darker blue on hover */
+  transform: scale(1.1);         /* slight grow effect */
+}
+
+@media (max-width: 768px) {
+
+  /* Stack layout */
+  .ila-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px 15px;
+    gap: 20px;
+  }
+
+  /* Left + Right full width */
+  .ila-left, 
+  .ila-right {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  /* Titles (Left + Right) */
+  .ila-info .ila-title,
+  .ila-right .ila-contact {
+    font-size: 26px;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  /* Contact text */
+  .ila-right p:not(.ila-contact) {
+    padding-left: 0;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  /* Subtitle */
+  .ila-subtitle {
+    font-size: 14px;
+  }
+
+  /* Follow title */
+  .ila-follow {
+    font-size: 22px;
+    padding-top: 15px;
+    text-align: center;
+  }
+
+  /* Facebook icon */
+  a[href*="facebook.com"] {
+    font-size: 22px;
+  }
+
+  /* Hide decorative vertical line if exists */
+  .ila-info::before {
+    display: none !important;
+  }
+}
+
+footer {
+  background-color:black;
+  color: #F0F4F8;
+  text-align: center;
+  padding: 15px 30px;
+}
