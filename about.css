@@ -339,7 +339,13 @@ header {
   }
 }
 
+.ILA{
+ color: #6E260E;
+}
 
+.ILA-saddlebrown{
+  color: black;
+}
 
 /* SECTION */
 .ila-info {
