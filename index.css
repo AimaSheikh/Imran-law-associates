@@ -309,6 +309,22 @@ header {
     padding: 20px;
   }
 
+   /* Fix ONLY left-container headings & text */
+  .main .writing,
+  .main .color-word,
+  .main .description {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    text-align: center !important;
+    width: 100%;
+  }
+
+  /* Make left container center its children */
+  .main {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
   .main, .side {
     flex: none;
     width: 100%;

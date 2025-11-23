@@ -263,7 +263,6 @@ header {
 
 /* Responsive Media Queries */
 @media (max-width: 1024px) {
-  .about-us,
   .content,
   .dispute-name,
   .name-la,
@@ -282,7 +281,6 @@ header {
 }
 
 @media (max-width: 768px) {
-  .about-us,
   .content,
   .dispute-name,
   .name-la,
@@ -299,7 +297,6 @@ header {
     font-size: 0.9rem;
   }
 
-  .about-div,
   .introduction,
   .legal-advisory,
   .litigation,
@@ -310,7 +307,6 @@ header {
 }
 
 @media (max-width: 480px) {
-  .about-us,
   .content,
   .dispute-name,
   .name-la,
@@ -336,6 +332,13 @@ header {
     padding: 30px 5%;
   }
 }
+
+@media (max-width: 480px) {
+  .about-us {
+    font-size: 3rem !important;
+  }
+}
+
 
 
 /* SECTION */
