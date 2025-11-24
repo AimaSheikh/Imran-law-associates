@@ -46,8 +46,8 @@ header {
 }
 
 .tagline {
-  font-size: 12px;
-  color: saddlebrown;
+  font-size: 14px;
+  color: #f9a825;
   margin: 0;
   text-align: left;
 }
@@ -282,7 +282,7 @@ header {
 .ila-info .ila-title {
   font-size: 35px;
   font-weight: 500;
-  color: white !important;        /* FORCE apply */
+  color: black !important;        /* FORCE apply */
   font-family: 'Times New Roman', Times, serif;
   position: relative;
 }
@@ -291,7 +291,7 @@ header {
 .ila-right .ila-contact {
   font-size: 35px;             /* same as left title */
   font-weight: 500;
-  color: white;
+  color: black;
   font-family: 'Times New Roman', Times, serif;
   position: relative;
   text-align: right;
@@ -301,7 +301,7 @@ header {
 .ila-follow{
   font-size: 25px;             /* same as left title */
   font-weight: 500;
-  color: white;
+  color: black;
   font-family: 'Times New Roman', Times, serif;
   position: relative;
   padding-top: 40px;
@@ -310,7 +310,7 @@ header {
 /* Keep the rest of contact details normal */
 .ila-right p:not(.ila-contact) {
   font-size: 18px;
-  color: black;
+  color: blanchedalmond;
   margin: 6px 0;
   line-height: 1.4;
   text-align: left;
@@ -323,7 +323,7 @@ header {
 }
 
 .ila-email {
-  color: black;       /* gold-ish color for visibility */
+  color: #f9a825;       /* gold-ish color for visibility */
   text-decoration: none; /* remove underline */
   font-weight: 500;
 }
@@ -331,14 +331,6 @@ header {
 .ila-email:hover {
   text-decoration: underline; /* optional hover effect */
   color: #6E260E;
-}
-
-.ila-follow{
-  font-size: 27px;
-  font-weight: 500;
-  color: white !important;        /* FORCE apply */
-  font-family: 'Times New Roman', Times, serif;
-  text-align: left;
 }
 
 /* Facebook icon link */
